@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: black;
+}
+#wrapper {
+  text-align: center;
+  background-color: #f14e0d;
+  color: white;
+  max-width: 768px;
+  margin: 120px auto;
+  border-radius: 10px;
+}
+#timer {
+  margin: 20px 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+#timer .timer_item > *:first-child {
+  font-size: 25px;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.timer_item {
+  border: 3px dashed #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  padding: 10px;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  animation: spin 2s ease 0.3s infinite forwards;
+}
+@keyframes spin {
+  25% {
+    border-right-color: lawngreen;
+  }
+  50% {
+    border-left-color: springgreen;
+  }
+  75% {
+    border-bottom-color: #f14e0d;
+  }
+  100% {
+    border-top-color: #f14e0d;
+  }
+}
